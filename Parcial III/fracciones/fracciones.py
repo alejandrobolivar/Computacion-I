@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Apr 19 08:19:29 2022
 Solucion del ejercicio de operaciones con fracciones
@@ -79,11 +78,12 @@ def divisionentera(a, b):
 
 # Procedimiento que forma una fraccion mixta a partir de una fraccion
 def fraccionmixta(a, b):
-    if a <= b:
+    if a <= b:  # fracción propia
         c = 0
-    else:
-        c, a = divisionentera(a, b)
-    return a, c
+        r = a
+    else:       # fracción impropia
+        c, r = divisionentera(a, b)
+    return r, c, b
 
 # Procedimiento que suma dos fracciones
 def sumafraccion(a, b, c, d):
@@ -118,6 +118,24 @@ def imprimirfraccion(num, den):
     print(" (%d / %d) " % (num, den), end="")
 
 def main():
+    
+    # Que tengo
+    num1: int
+    den1: int  # Fraccion 1
+    num2: int
+    den2: int  # Fraccion 2
+    op: int
+    cocr: int  # Fraccion mixta resultante por el estudiante
+    numr: int
+    denr: int
+    # Que Quiero
+    punt: int = 0  # Puntaje obtenido, Acumulador
+    # Variables auxiliares
+    coc: int
+    num: int
+    den: int  # Fraccion mixta correcta
+    i: int
+
     arch = open("examen.txt", "r")
     punt = 0
     # Ciclo de lectura
@@ -127,6 +145,7 @@ def main():
         # Determinacion del resultado correcto a la operacion a realizar e
         # Impresion del resultado
         imprimirfraccion(num1, den1)
+        
         if op == 1:
             num, den = sumafraccion(num1, den1, num2, den2)
             print("+", end="")
@@ -140,11 +159,13 @@ def main():
             num, den = dividafraccion(num1, den1, num2, den2)
             print("/", end="")
 
-        # Determinacion de la fraccion mixta resultante
-        num, coc = fraccionmixta(num, den)
         imprimirfraccion(num2, den2)
-        print("= %d" % cocr,end="")
-        imprimirfraccion(numr, denr)
+        
+        # Determinacion de la fraccion mixta resultante
+        num, coc, den = fraccionmixta(num, den)
+        print("= %d" % coc, end="")
+        imprimirfraccion(num, den)
+
         if iguales(cocr, numr, denr, coc, num, den):
             print(" Correcto")
             punt += 4
