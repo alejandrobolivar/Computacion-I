@@ -1,0 +1,17 @@
+Maria No es un infractor
+Pedro Es infractor y debe cancelar una multa de 0.78  $
+Juan No es un infractor
+Pablo No es un infractor
+Moises Es infractor y debe cancelar una multa de 75.78  $
+Luis Es infractor y debe cancelar una multa de 100.78  $
+Paola Es infractor y debe cancelar una multa de 25.78  $
+Marta Es infractor y debe cancelar una multa de 100.78  $
+Nohemi Es infractor y debe cancelar una multa de 38.28  $
+Saul No es un infractor
+Raul Es infractor y debe cancelar una multa de  31.85  $
+Felipe No es un infractor
+Raquel Es infractor y debe cancelar una multa de 15.78  $
+El porcentaje es 83.33
+Despues de encontrar al primer infractor fueron procesados 3 vehiculos
+El tercer infractor masculino fue Luis y debe cancelar una multa de 100.78  $
+El promedio es 45.15 
